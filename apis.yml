@@ -1,23 +1,70 @@
 aid: ancsonic
+
 name: Ancsonic
-description: 'Ancsonic is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Ancsonic (安声科技) is a Beijing‑based technology company specializing in intelligent acoustic solutions for smart earphones, automotive,
+  appliance and industrial applications. It offers R&D, core algorithms, manufacturing services and ODM solutions, serving global customers with
+  advanced sound processing and acoustic design.
+
 url: https://raw.githubusercontent.com/api-evangelist/ancsonic/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- Acoustic
+- Technology
+- Manufacturing
+- IoT
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/ancsonic-hosts.yml
+- type: PrivacyPolicy
+  url: https://www.ancsonic.com/privacy.html
+- type: Newsroom
+  url: https://www.ancsonic.com/news/1.html
+- type: DomainSecurity
+  url: security/ancsonic-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/ancsonic
+  url: https://www.ancsonic.com
+
+apis:
+- name: AncSonic API
+  description: AncSonic Technology Intelligent Acoustic Solutions
+  humanURL: https://www.ancsonic.com
+  baseURL: null
+  properties: []
+  aid: ancsonic:ancsonic-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No machine‑readable API contract was found despite public website.
+  evidence:
+  - url: https://www.ancsonic.com
+    status: 200
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
